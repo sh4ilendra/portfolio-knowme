@@ -1,3 +1,4 @@
 {
-    "mongoDBURI": "mongodb+srv://sh4ilendra:%23Shailusv%401@knowmecluster.xrlcx.mongodb.net/knowme?retryWrites=true&w=majority"
+    "mongoDBURI": "mongodb+srv://sh4ilendra:%23Shailusv%401@knowmecluster.xrlcx.mongodb.net/knowme?retryWrites=true&w=majority",
+    "jwtSecretKey": "knowmeSecretToken"
 }

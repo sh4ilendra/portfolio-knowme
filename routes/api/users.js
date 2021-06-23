@@ -22,7 +22,7 @@ router.get("/", (req, res) => {
 router.post(
   "/",
   [
-    check("name", "Name is required").exists(),
+    check("name", "Name is required").notEmpty(),
     check("email", "Please enter a valid email").isEmail(),
     check(
       "password",

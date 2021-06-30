@@ -302,14 +302,15 @@ router.delete("/education/:edu_id", auth, async (req, res) => {
 router.get("/github/:username", (req, res) => {
   try {
     const options = {
-      uri: `https://api.github.com/users/${req.params.username}/repos?per_page=5&sort=created:asc`,
+      uri: encodeURI(
+        `https://api.github.com/users/${req.params.username}/repos?per_page=5&sort=created:asc`
+      ),
       method: "GET",
       headers: {
         "user-agent": "node.js",
         Authorization: `token ${config.get("githubToken")}`,
       },
     };
-    console.log(req.params.username);
     request(options, (error, response, body) => {
       if (error) {
         console.error(error);

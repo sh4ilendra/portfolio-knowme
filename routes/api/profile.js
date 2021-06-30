@@ -313,13 +313,12 @@ router.get("/github/:username", async (req, res) => {
       type: "public",
     });
 
-    if (result.status !== 200) {
-      return res.status(404).json({ msg: "GitHub profile not found" });
-    }
-
     res.json(result.data);
   } catch (err) {
     console.error(err.message);
+    if (err.status === 404) {
+      return res.status(404).json({ msg: "GitHub profile not found" });
+    }
     res.status(500).send("Server error");
   }
 });

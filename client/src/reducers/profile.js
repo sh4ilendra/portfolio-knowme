@@ -20,7 +20,7 @@ export default function profileReducer(state = initialState, action) {
       return {
         ...state,
         profile: payload,
-        laoding: false,
+        loading: false,
       };
     case PROFILE_ERROR:
       return {
@@ -33,7 +33,7 @@ export default function profileReducer(state = initialState, action) {
         ...state,
         profile: null,
         repos: [],
-        laoding: false,
+        loading: false,
       };
     default:
       return state;

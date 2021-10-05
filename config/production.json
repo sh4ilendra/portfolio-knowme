@@ -1,0 +1,5 @@
+{
+    "mongoDBURI": "mongodb+srv://sh4ilendra:%23Shailusv%401@knowmecluster.xrlcx.mongodb.net/knowme?retryWrites=true&w=majority",
+    "jwtSecretKey": "knowmeSecretToken",
+    "githubToken": "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"
+}
